@@ -43,17 +43,17 @@
             <div class="process-header">
                 <div class="process-container">
                     <div class="process-left">
-                        <img src="Imagene/coffee2.jpg" alt="Process-image">
-                        <img src="Imagene/gallery5.jpg" alt="three-coffe-image">
+                        <img src="Imagene/coffee2.jpg" alt="Café con leche servido en taza blanca, decorado con espuma en forma de corazón, acompañado de granos de café esparcidos">
+                        <img src="Imagene/gallery5.jpg" alt="Brindis entre tres personas con dos tazas de café con arte latte y un vaso de café frío, resaltando la textura de la espuma y el ambiente casual.">
                     </div>
                     <div class="process-right">
-                        <h2 class="process-title">Nuestro proceso para que vivas<span> tu experiencia unica</span></h2>
-                        <p>En nuestra marca, nos enorgullecemos de seguir un proceso cuidadoso y artesanal para procesar nuestros cafés de alta calidad. Desde la selección de las mejores semillas hasta la taza final, cada paso es crucial para asegurar que nuestro café sea rico, complejo y lleno de sabor</p>    
+                        <h2 class="process-title">Nuestro proceso para que vivas<span> tu experiencia única</span></h2>
+                        <p>En nuestra marca, nos enorgullecemos de seguir un proceso cuidadoso y artesanal para procesar nuestros cafés de alta calidad. Desde la selección de las mejores semillas hasta la taza final, cada paso es crucial para asegurar que nuestro café sea rico, complejo y lleno de sabor.</p>    
                         <h3>El proceso comienza con la selección de las semillas:</h3>
                         <p>Nuestros productores seleccionan las mejores semillas de café, teniendo en cuenta factores como la variedad, la calidad y la frescura. Las semillas se seleccionan cuidadosamente para asegurar que solo las mejores lleguen a nuestras manos.</p>
-                        <h3>Despulpado y fermentación</h3>
+                        <h3>Despulpado y fermentación:</h3>
                         <p>Una vez que las semillas llegan a nuestra planta de procesamiento, se despulpan para eliminar la cáscara exterior. Luego, se someten a un proceso de fermentación, que puede variar en duración dependiendo de la variedad y el método de procesamiento. La fermentación ayuda a desarrollar los sabores y aromas naturales del café.</p>
-                        <h3>Tostado</h3>
+                        <h3>Tostado:</h3>
                         <p>Una vez que las semillas están secas, se tuestan a diferentes niveles para sacar a relucir los sabores y aromas únicos de cada variedad. Nuestros expertos tostadores monitorean cuidadosamente el proceso para asegurar que cada lote sea perfecto.</p>
                         <h3>Molienda y empaque:</h3>
                         <p>Finalmente, el café se muele y se empaca en bolsas o contenedores herméticos para preservar su frescura y sabor. Nuestro café está listo para ser disfrutado en cualquier momento y lugar.
@@ -116,11 +116,23 @@
     const links = document.querySelector(".nav-links");
     const menuBtn = document.querySelector(".menu-responsive");
 
-    menuBtn.addEventListener("click",openMenu);
+    menuBtn.addEventListener("click", toggleMenu);
 
-    function openMenu(){
-       links.classList.toggle("open"); 
+    function toggleMenu(event) {
+        event.stopPropagation(); // evita que se dispare el click del documento
+        links.classList.toggle("open");
+
+        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", !isExpanded);
     }
+
+    // Cerrar el menú si se hace clic fuera
+    document.addEventListener("click", function(event) {
+        if (!links.contains(event.target) && !menuBtn.contains(event.target)) {
+            links.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+        }
+    });
 </script>
 
 

@@ -61,6 +61,7 @@ nav .nav-links{
     display: flex;
     list-style: none;
 
+
     a{
      text-decoration: none;
     color: #a8a8a8;
@@ -91,6 +92,7 @@ nav .nav-links .button-carrito:hover{
     cursor: pointer;
     opacity: 0.6;
     display: none;
+    transition: all 0.3s ease;
 
     span{
         height: 3px;

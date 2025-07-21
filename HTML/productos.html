@@ -137,15 +137,28 @@
         </section>
 
 
+    <!-- JSS -->
 <script>
     const links = document.querySelector(".nav-links");
     const menuBtn = document.querySelector(".menu-responsive");
 
-    menuBtn.addEventListener("click",openMenu);
+    menuBtn.addEventListener("click", toggleMenu);
 
-    function openMenu(){
-       links.classList.toggle("open"); 
+    function toggleMenu(event) {
+        event.stopPropagation(); // evita que se dispare el click del documento
+        links.classList.toggle("open");
+
+        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", !isExpanded);
     }
+
+    // Cerrar el menú si se hace clic fuera
+    document.addEventListener("click", function(event) {
+        if (!links.contains(event.target) && !menuBtn.contains(event.target)) {
+            links.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+        }
+    });
 </script>
 
 
