@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Esposito - Nosotros</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+        <!-- Navbar -->
+<nav>
+    <a href="../index.html" class="logo">Café<span> Esposito</span></a>
+    <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="#" class="button-carrito">Carrito</a></li>
+    </ul>
+    <div class="menu-responsive">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- Nosotros -->
+  <section class="us-section">
+    <div class="us-container">
+        <h2>Sobre <span>Nosotros</span></h2>
+        <div class="us-mision">
+            <h3>Misión</h3>
+            <p> En Café Esposito, nuestra misión es ofrecer una experiencia cafetera auténtica 
+                y de calidad superior, brindando café molido, en grano y en cápsulas que despierte los sentidos 
+                y conecte a las personas en cada taza. 
+                Nos comprometemos con la excelencia, desde la selección del grano hasta la entrega, 
+                promoviendo momentos únicos de sabor y calidez.
+            </p>  
+        </div>
+        <div class="us-vision">
+            <h3>Visión</h3>
+            <p>
+                Ser una marca referente en el mundo del café de especialidad en Argentina y Latinoamérica,
+                reconocida por la pasión, el sabor inconfundible y la innovación constante en cada producto. 
+                Aspiramos a construir una comunidad unida por el amor al buen café.
+            </p>
+            
+        </div>
+
+
+    </div>
+  </section>
+    
+
+
+<!-- FOOTER -->
+
+<section class="footer-section">
+            <footer>
+                    <div class="footer-container">
+                        <div class="footer-about">
+                            <p class="logo">Café <span>Esposito</span></p>
+                            <p>Mas que un café, una experiencia en cada taza</p>
+                            <div class="social-icons">
+                                <div class="icon-container">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <div class="icon-container">
+                                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                                </div>
+                                <div class="icon-container">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="icon-container">
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-links">
+                            <h3>Mapa del sitio</h3>
+                            <ul>
+                                <li><a href="../index.html">Inicio</a></li>
+                                <li><a href="productos.html">Productos</a></li>
+                                <li><a href="nosotros.html">Nosotros</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                                <li><a href="galeria.html">Galeria</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-contact">
+                            <h3>Contacto</h3>
+                            <p>Mariano Castex 5700</p>
+                            <p>Ezeiza, Canning</p>
+                            <p>Email: cafeesposito@gmail.com.ar</p>
+                            <p>Telefono: +54 (011) 4462-3215</p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Copyright Tienda de café - Todos los derechos reservados.
+                        Todos los logos, productos, marcas y nombres aqui utilizados son propiedad registrada. </p>
+                    </div>
+            </footer>
+
+        </section>
+
+
+<script>
+    const links = document.querySelector(".nav-links");
+    const menuBtn = document.querySelector(".menu-responsive");
+
+    menuBtn.addEventListener("click",openMenu);
+
+    function openMenu(){
+       links.classList.toggle("open"); 
+    }
+</script>
+
+
+</body>
+</html>
