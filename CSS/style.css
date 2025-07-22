@@ -737,7 +737,15 @@ footer .footer-bottom p {
   .product-header h2 {
     margin-top: 60px;
   }
-  .product-section .product-container .card .card-content {
+  .product-section .product-container .card-one .card-content {
+    opacity: 1;
+    max-height: 400px;
+  }
+  .product-section .product-container .card-two .card-content {
+    opacity: 1;
+    max-height: 400px;
+  }
+  .product-section .product-container .card-three .card-content {
     opacity: 1;
     max-height: 400px;
   }
@@ -749,7 +757,15 @@ footer .footer-bottom p {
   .product-header h2 {
     margin-top: 60px;
   }
-  .product-section .product-container .card .card-content {
+  .product-section .product-container .card-one .card-content {
+    opacity: 1;
+    max-height: 400px;
+  }
+  .product-section .product-container .card-two .card-content {
+    opacity: 1;
+    max-height: 400px;
+  }
+  .product-section .product-container .card-three .card-content {
     opacity: 1;
     max-height: 400px;
   }
@@ -757,13 +773,13 @@ footer .footer-bottom p {
 /* Nosotros Responsive */
 @media (max-width: 1024px) {
   .us-section {
-    height: 180vh;
+    height: 120vh;
   }
 }
 /* Contacto Responsive */
 @media (max-width: 1024px) {
   .contact-section {
-    height: 130vh;
+    height: 100vh;
   }
   .contact-section .contact-container {
     grid-template-columns: 1fr;

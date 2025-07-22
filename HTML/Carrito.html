@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Esposito - Carrito</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <!-- Navbar -->
+        <section class="nav-section">
+            <nav class="nav-background">
+                <a href="../index.html" class="logo">Café<span> Esposito</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="Carrito.html" class="button-carrito"
+                            title="Funcionalidad próximamente disponible">Carrito</a>
+                    </li>
+                </ul>
+                <div class="menu-responsive">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <div class="nav-content">
+                <h2>Proximamente <span>Disponible.</span></h2>
+                <p>Estamos trabajando para que puedas ver y gestionar tus compras aquí.</p>
+                <a href="productos.html" class="cta-button">Explora nuestro catalogo</a>
+            </div>
+        </section>
+
+
+        <!--  Footer -->
+        <section class="footer-section">
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <p class="logo">Café <span>Esposito</span></p>
+                        <p>Mas que un café, una experiencia en cada taza</p>
+                        <div class="social-icons">
+                            <div class="icon-container">
+                                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="icon-container">
+                                <a href="https://www.twitter.com"><i class="fab fa-x-twitter"></i></a>
+                            </div>
+                            <div class="icon-container">
+                                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="icon-container">
+                                <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-links">
+                        <h3>Mapa del sitio</h3>
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="galeria.html">Galeria</a></li>
+                            <li><a href="Carrito.html">Galeria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contacto</h3>
+                        <p>Mariano Castex 5700</p>
+                        <p>Ezeiza, Canning</p>
+                        <p>Email: cafeesposito@gmail.com.ar</p>
+                        <p>Telefono: +54 (011) 4462-3215</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Copyright Tienda de café - Todos los derechos reservados.
+                        Todos los logos, productos, marcas y nombres aqui utilizados son propiedad registrada. </p>
+                </div>
+            </footer>
+
+        </section>
+    </main>
+
+    <!-- JSS -->
+    <script>
+        const links = document.querySelector(".nav-links");
+        const menuBtn = document.querySelector(".menu-responsive");
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        function toggleMenu(event) {
+            event.stopPropagation(); // evita que se dispare el click del documento
+            links.classList.toggle("open");
+
+            const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+            menuBtn.setAttribute("aria-expanded", !isExpanded);
+        }
+
+        // Cerrar el menú si se hace clic fuera
+        document.addEventListener("click", function (event) {
+            if (!links.contains(event.target) && !menuBtn.contains(event.target)) {
+                links.classList.remove("open");
+                menuBtn.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
+
+
+</body>
+</html>

@@ -695,17 +695,36 @@ place-items: end;
         margin-top: 60px;
     }
 
-    .product-section .product-container .card {
+    .product-section .product-container{ 
+        
+        
+        
+        .card-one {
     
-
-
-        .card-content{
-            opacity: 1;
-            max-height: 400px;
+            .card-content{
+                opacity: 1;
+                max-height: 400px;
+            }
         }
+        .card-two {
+    
+            .card-content{
+                opacity: 1;
+                max-height: 400px;
+            }
+        }
+                .card-three {
+    
+            .card-content{
+                opacity: 1;
+                max-height: 400px;
+            }
+        }    
         
         
     }
+
+
 }
 
 @media(max-width:430px){
@@ -716,14 +735,31 @@ place-items: end;
         margin-top: 60px;
     }
 
-    .product-section .product-container .card {
+    .product-section .product-container{ 
+        
+        
+        
+        .card-one {
     
-
-
-        .card-content{
-            opacity: 1;
-            max-height: 400px;
+            .card-content{
+                opacity: 1;
+                max-height: 400px;
+            }
         }
+        .card-two {
+    
+            .card-content{
+                opacity: 1;
+                max-height: 400px;
+            }
+        }
+                .card-three {
+    
+            .card-content{
+                opacity: 1;
+                max-height: 400px;
+            }
+        }    
         
         
     }
@@ -733,7 +769,7 @@ place-items: end;
 /* Nosotros Responsive */
 @media(max-width:1024px){
     .us-section {
-        height: 180vh;
+        height: 120vh;
     }
 }
 
@@ -745,7 +781,7 @@ place-items: end;
 @media(max-width:1024px){
 
     .contact-section{
-        height: 130vh;
+        height: 100vh;
     }
     .contact-section .contact-container {
         grid-template-columns: 1fr;

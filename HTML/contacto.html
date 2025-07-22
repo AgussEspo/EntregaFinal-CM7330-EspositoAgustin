@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+
 <body>
     <!-- Navbar -->
     <nav>
@@ -19,7 +21,7 @@
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="#" class="button-carrito">Carrito</a></li>
+            <li><a href="Carrito.html" class="button-carrito" title="Funcionalidad próximamente disponible">Carrito</a>
         </ul>
         <div class="menu-responsive">
             <span></span>
@@ -34,7 +36,10 @@
         </div>
         <div class="contact-container">
             <div class="map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.1448944477697!2d-58.51335752357967!3d-34.90281317284862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd7ad65488925%3A0x38a8238f67057ce4!2sMariano%20Castex%205700%2C%20B1804%20Canning%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1749860015254!5m2!1sen!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.1448944477697!2d-58.51335752357967!3d-34.90281317284862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd7ad65488925%3A0x38a8238f67057ce4!2sMariano%20Castex%205700%2C%20B1804%20Canning%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1749860015254!5m2!1sen!2sar"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contact-form">
                 <h3>Comunicate con nosotros:</h3>
@@ -73,16 +78,16 @@
                     <p>Mas que un café, una experiencia en cada taza</p>
                     <div class="social-icons">
                         <div class="icon-container">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
                         </div>
                         <div class="icon-container">
-                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.twitter.com"><i class="fab fa-x-twitter"></i></a>
                         </div>
                         <div class="icon-container">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
                         </div>
                         <div class="icon-container">
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -94,6 +99,7 @@
                         <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="Carrito.html">Carrito</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -114,28 +120,29 @@
 
 
     <!-- JSS -->
-<script>
-    const links = document.querySelector(".nav-links");
-    const menuBtn = document.querySelector(".menu-responsive");
+    <script>
+        const links = document.querySelector(".nav-links");
+        const menuBtn = document.querySelector(".menu-responsive");
 
-    menuBtn.addEventListener("click", toggleMenu);
+        menuBtn.addEventListener("click", toggleMenu);
 
-    function toggleMenu(event) {
-        event.stopPropagation(); // evita que se dispare el click del documento
-        links.classList.toggle("open");
+        function toggleMenu(event) {
+            event.stopPropagation(); // evita que se dispare el click del documento
+            links.classList.toggle("open");
 
-        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-        menuBtn.setAttribute("aria-expanded", !isExpanded);
-    }
-
-    // Cerrar el menú si se hace clic fuera
-    document.addEventListener("click", function(event) {
-        if (!links.contains(event.target) && !menuBtn.contains(event.target)) {
-            links.classList.remove("open");
-            menuBtn.setAttribute("aria-expanded", "false");
+            const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+            menuBtn.setAttribute("aria-expanded", !isExpanded);
         }
-    });
-</script>
+
+        // Cerrar el menú si se hace clic fuera
+        document.addEventListener("click", function (event) {
+            if (!links.contains(event.target) && !menuBtn.contains(event.target)) {
+                links.classList.remove("open");
+                menuBtn.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
 
 </body>
+
 </html>
