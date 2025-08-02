@@ -1,0 +1,97 @@
+@import "../variables/variables";
+
+
+/* Contacto */
+
+.contact-section {
+    padding: 60px 0;
+    background-color: #3f3f3f;
+    height: 85vh;
+
+    div{
+        h2{
+            display: flex;
+            justify-content: center;
+            color: $primary-color;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+
+            span{
+                color: $secondary-color;
+            }
+        }
+    }
+    .contact-container{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        max-width: 1200px;
+        width: 90%;
+        margin: auto;
+        gap: 20px;
+    
+        .contact-form{
+            background-color: #212121;
+
+            h3{
+                font-size: 1.5rem;
+                margin: 20px 0;
+                text-align: center;
+                color: $primary-color; 
+            }
+        }
+    }
+}
+
+.contact-section .contact-container .contact-form form div{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-section .contact-container .contact-form .input-container input{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 50px;
+    padding: 0 15px;
+    outline: none;
+
+} 
+
+.contact-section .contact-container .contact-form .input-container textarea{
+      width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 50px;
+    padding: 0 15px;
+    outline: none;
+    padding: 10px 15px;
+    height: 150px;
+    resize: none;
+}
+
+
+.form-button {
+    color: $primary-color;
+    background-color: $secondary-color;
+    padding: 8px 25px;
+    margin-bottom: 15px;
+    width: 100%;
+    transition: 0.7s;
+}
+
+.form-button:hover{
+    background-color: #be5d20;
+}
+
+
+/* Contacto Responsive */
+
+@media(max-width:1024px){
+
+    .contact-section{
+        height: 100vh;
+    }
+    .contact-section .contact-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,52 @@
+@import "../variables/variables";
+
+/* Carousel */
+
+.carousel-section {
+    height: 85vh;
+    background-color: #3f3f3f;
+    display: grid;
+    justify-content: center;
+}
+
+.carousel-section div h2{
+    color: $primary-color;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 700;
+
+    span{
+        color: $secondary-color;
+    }
+}
+
+.carousel-inner img {
+height: 600px;
+object-fit: cover;
+border-radius: 10px;
+
+}
+
+/* Galeria Responsive */
+
+@media(max-width:1024px){
+  .carousel-section{
+    height: 75vh;
+  }
+ .carousel-section div h2{
+    margin-top: 100px;
+    font-size: 2rem;
+  }  
+
+  .carousel-inner {
+    height: 300px;
+}
+
+.carousel-inner img {
+width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+}

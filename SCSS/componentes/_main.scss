@@ -1,0 +1,67 @@
+@import "../variables/variables";
+
+
+/* Process-Section */
+.process-header .process-container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    place-items: center;
+    background-color: #e0d8c7;
+    padding: 15px; 
+ 
+    .process-left img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    padding: 5px;
+ }
+
+ .process-right{
+    padding: 0 20px;
+    
+    h2{
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 10px;  
+    }
+    
+    h3{
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 10px; 
+    }
+    p{
+        font-size: 1.1rem;
+        margin-bottom: 10px;  
+    }
+ }
+    
+}
+
+
+.process-header h2{
+    font-size: 2rem;
+    text-align: left;
+}
+
+div .process-title span{
+    color: $secondary-color;
+}
+
+
+   /* Responsive Process*/
+@media (max-width:1024px){
+    .process-header .process-container {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* Responsive Image */
+@media(max-width:1000px){
+        .process-header .process-container .process-left img{
+        display: none;
+    }
+}
